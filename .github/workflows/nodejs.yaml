@@ -28,12 +28,15 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: Show files
+        run: ls -la
+
       - name: Change to project directory
-        run: cd NodeGuide
+        run: cd NodeGuide/
 
       - name: Show files
         run: ls -la
-        
+
       - name: Run tests
         run: npm test
 
