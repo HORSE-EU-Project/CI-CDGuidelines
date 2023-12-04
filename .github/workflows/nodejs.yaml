@@ -30,6 +30,9 @@ jobs:
 
       - name: Change to project directory
         run: cd NodeGuide
+
+      - name: Show files
+        run: ls -la
         
       - name: Run tests
         run: npm test
