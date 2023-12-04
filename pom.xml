@@ -1,48 +1,44 @@
-<project xmlns=http://maven.apache.org/POM/4.0.0
+<project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
-http://maven.apache.org/xsd/maven-4.0.0.xsd">
-		<!-- Model version of Maven POM file; always 4.0.0 for Maven 2 & 3-->
-		<modelVersion>4.0.0</modelVersion>
-		<!-- Basic project information -->
- 		<groupId>com.example</groupId> <!-- Group or organization that the project belongs to -->
-		<artifactId>java-github-example</artifactId> <!-- Name of the project artifact (e.g., JAR or WAR file) -->
-		<version>1.0-SNAPSHOT</version> <!-- Version of the project. 'SNAPSHOT' indicates a development version -->
-		<!-- Java version compatibility -->
-		<properties>
-			<!-- Specifies the Java version used for compiling the source code -->
-			<maven.compiler.source>11</maven.compiler.source> <!-- Use Java 11 for compiling source code -->
-			<maven.compiler.target>11</maven.compiler.target> <!--Ensure compatibility with Java 11 runtime -->
- 		</properties>
- 		<!-- Project dependencies -->
- 		<dependencies>
- 		<!-- Each dependency is defined here -->
- 		<!-- Example dependency: JUnit, a popular testing framework for Java -->
- 			<dependency>
- 				<groupId>junit</groupId> <!-- The group that publishes the Junit artifact -->
- 				<artifactId>junit</artifactId> <!-- The JUnit artifact name -->
- 				<version>4.13.2</version> <!-- Version of JUnit to use -->
- 				<scope>test</scope> <!-- 'test' scope means this dependency is only used for testing -->
- 			</dependency>
- 			<!-- Add more dependencies as needed -->
- 		</dependencies>
- 		<!-- Build plugins -->
- 		<build>
-			<plugins>
-				<!-- Maven Compiler Plugin: configures how the project source code should be compiled -->
- 				<plugin>
- 				<groupId>org.apache.maven.plugins</groupId> <!-- Group that provides the compiler plugin -->
-					<artifactId>maven-compiler-plugin</artifactId> 
-					<!-- Compiler plugin artifact name -->
-					<version>3.8.1</version>
-					<!-- Version of the compiler plugin -->
- 					<configuration>
-					<!-- Use the properties defined above for the source and target Java versions -->
-						<source>${maven.compiler.source}</source>
-						<target>${maven.compiler.target}</target>
-					</configuration>
-				</plugin>
-				<!-- Other plugins can be added here -->
-			</plugins>
-		</build>
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <!-- Model version of Maven POM file; always 4.0.0 for Maven 2 & 3-->
+    <modelVersion>4.0.0</modelVersion>
+    <!-- Basic project information -->
+    <groupId>com.example</groupId>
+    <artifactId>java-github-example</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <!-- Java version compatibility -->
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+    </properties>
+    <!-- Project dependencies -->
+    <dependencies>
+        <!-- Example dependency: JUnit, a popular testing framework for Java -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- Add more dependencies as needed -->
+    </dependencies>
+    <!-- Build plugins -->
+    <build>
+        <plugins>
+            <!-- Maven Compiler Plugin: configures how the project source code should be compiled -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <!-- Use the properties defined above for the source and target Java versions -->
+                    <source>${maven.compiler.source}</source>
+                    <target>${maven.compiler.target}</target>
+                </configuration>
+            </plugin>
+            <!-- Other plugins can be added here -->
+        </plugins>
+    </build>
 </project>
